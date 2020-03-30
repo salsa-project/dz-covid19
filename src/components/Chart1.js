@@ -30,7 +30,6 @@ const mapDispatchToProps = (dispatch)=>{
 }
 
 const mapStateToProps = (state, ownProps)=>{
-	console.log(state)
 	return state
 }
 

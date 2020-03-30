@@ -68,3 +68,17 @@
   font-size: 2rem;
   text-align: center;
 }
+#loader{
+	height: 50px;
+	width: 50px;
+	margin: 15px auto;
+	border: 2px white dashed;
+	border-color: rgba(255,255,255,0.7) transparent;
+	border-radius: 50%;
+	animation: spin .8s infinite linear;
+}
+
+@keyframes spin{
+	0%{transform: rotate(0deg)}
+	50%{transform: rotate(180deg)}
+}
