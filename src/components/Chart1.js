@@ -9,7 +9,7 @@ function Chart1(props){
 
 	useEffect(()=>{
 		fetchTimeLine().then((rs)=>{
-      let statsDataConfirmed = {columns: [['confirmed']]};
+      let statsDataConfirmed = {columns: [['حالات مؤكدة']]};
       rs['Algeria'].forEach(({date, confirmed, recovered, deaths})=>{
         statsDataConfirmed.columns[0].push(confirmed)
       })
@@ -18,7 +18,9 @@ function Chart1(props){
 	},[])
 
 	return(
-		<C3Chart data={props.timeLineArrayConfirmed}/>
+		<div class='chart-container'>
+			<C3Chart data={props.timeLineArrayConfirmed}/>
+		</div>
 	)
 
 }

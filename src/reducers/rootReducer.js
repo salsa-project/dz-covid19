@@ -10,14 +10,16 @@ const initState = {
 		},
 		active: 0,
     casesPerOneMillion: 0,
-		timeLineArrayConfirmed: {columns: [["confirmed", 0, 0, 0, 0, 0, 0]]},
+		timeLineArrayConfirmed: {columns: [["حالات مؤكدة", 10, 10, 10, 10, 10, 10]]},
+		timeLineRecoveredDied: {'نسبة الشفاء': [61],
+      										  'نسبة الموت': [58]},
 		loader: true
 }
 
 
 const rootReducer = (state = initState, action)=>{
 
-//	console.log(action)
+	console.log(action)
 
 	switch (action.type){
 		case 'setCases':
@@ -28,6 +30,9 @@ const rootReducer = (state = initState, action)=>{
 			break;
 		case 'setLoaderOff':
 			return {...state, loader: false}
+			break;
+		case 'setRecoveredDeaths':
+			return {...state, timeLineRecoveredDied: action.body}
 			break;
 	}
 	return state

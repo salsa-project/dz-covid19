@@ -13,4 +13,3 @@ export const fetchTimeLine = async ()=>{
 
 	return response;
 }
-
