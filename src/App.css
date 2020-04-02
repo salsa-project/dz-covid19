@@ -27,8 +27,8 @@ h3{
 	position: relative;
 	color: gray;
 	padding: 10px;
-	margin-right: 15px;
-	font-size: 0.8rem;
+	margin: 0px 10px 15px 0px;
+	font-size: 0.9rem;
 }
 h3::after{
 	position: absolute;
@@ -98,6 +98,45 @@ h3::after{
 	50%{transform: rotate(180deg)}
 }
 
+/*************************
+          Charts
+*************************/
+
 .chart-container *{
 	direction: ltr;
+}
+
+/*************************
+          Wilaya
+*************************/
+#wilaya-container{
+	box-shadow: 0px 0px 8px -3px gray;
+}
+#wilaya-container-header{
+	display: flex;
+}
+.wilaya{
+	display: flex;
+	padding: 8px 0px;
+}
+.wilaya:nth-child(even){
+	background: rgba(200,200,200, 0.1);
+}
+#wilaya-container-header{
+	padding: 5px 0px;
+  background: rgba(200,100,100, 0.7);
+}
+.wilaya>p, #wilaya-container-header>p{
+	width: 33%;
+	color: rgba(100,100,100,0.8);
+	text-align: center;
+	font-size: 11pt;
+}
+.wilaya>p+p:not(:last-child){
+  color: rgba(200, 100, 100, 0.7);
+	border-right: 1px rgba(200,200,200,0.5) solid;
+	border-left: 1px rgba(200,200,200,0.5) solid;
+}
+#wilaya-container-header>p{
+	color: white;
 }

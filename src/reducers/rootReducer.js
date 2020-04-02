@@ -12,7 +12,7 @@ const initState = {
     casesPerOneMillion: 0,
 		timeLineArrayConfirmed: {columns: [["حالات مؤكدة", 10, 10, 10, 10, 10, 10]]},
 		timeLineRecoveredDied: {'نسبة الشفاء': [61],
-      										  'نسبة الموت': [58]},
+      										  'نسبة الموت': [86]},
 		loader: true
 }
 

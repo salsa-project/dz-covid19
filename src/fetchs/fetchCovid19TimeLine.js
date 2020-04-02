@@ -13,3 +13,10 @@ export const fetchTimeLine = async ()=>{
 
 	return response;
 }
+
+export const fetchWilayaCases = async ()=>{
+	const request = await fetch('https://bitbucket.org/algcovid/covid19-alg/raw/2e8099ee9f5c91640cfbcc07b5b8f85be1235fa7/covid19-Wilayat-all.json');
+	const response = await request.json();
+
+	return response;
+}

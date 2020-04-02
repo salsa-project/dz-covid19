@@ -6,6 +6,7 @@ import './App.css'
 import Cases from './components/Cases'
 import Chart1 from './components/Chart1'
 import Chart2 from './components/Chart2'
+import Wilaya from './components/Wilaya'
 import db from './configs/db'
 
 function App(props){
@@ -18,10 +19,12 @@ function App(props){
 	  		<p></p>
 			</div>
 			<Cases />
-			<h3>منحنى تطور الحالات المصابة</h3>
-			<Chart1 />
 			<h3>دائرة بيانية لحالات الشفاء/الوفاة</h3>
 			<Chart2 />
+			<h3>منحنى تطور الحالات المصابة</h3>
+			<Chart1 />
+			<h3>الحالات المصابة حسب الولايات</h3>
+			<Wilaya />
     </div>
   )
 
