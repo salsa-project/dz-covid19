@@ -5,21 +5,24 @@ import WilayaCases from './WilayaCases'
 
 function  Wilaya(){
 
-	const [items, setItems] = useState()
+	const [dataArray, setDataArray] = useState([]);
+	const [items, setItems] = useState();
 
 	useEffect(()=>{
-
 		fetchWilayaCases().then(rs=>{
 			const dataElements = Object.entries(rs).map(item=>{
-				for(var i = 0; i < item[1].length; ++i){
-					var d2 = <WilayaCases key={i} wilayaName={item[1][i].wilayat} wilayaCases={item[1][i].Cas_confirm} percentage={'0%'} />
-				}
-				return d2
+				return item[1]
 			})
-			setItems(dataElements)
-		})
-
+			setDataArray(dataElements[0])
+			})
 	}, [])
+
+	useEffect(()=>{
+		const result = dataArray.map((item, i)=>{
+			return <WilayaCases key={i} wilayaName={item.wilayat} wilayaCases={item.Cas_confirm} percentage={'0%'} />
+		})
+		setItems(result)
+	},[dataArray])
 
 	return(
 		<div id='wilaya-container'>
